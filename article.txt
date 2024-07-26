@@ -1,0 +1,3 @@
+A vehicle and person recognition system for use by law enforcement is demonstrated at last year’s GPU Technology Conference in Washington, D.C., which highlights new uses for artificial intelligence and deep learning. (Saul Loeb/AFP/Getty Images)
+Digital life is augmenting human capacities and disrupting eons-old human activities. Code-driven systems have spread to more than half of the world’s inhabitants in ambient information and connectivity, offering previously unimagined opportunities and unprecedented threats. As emerging algorithm-driven artificial intelligence (AI) continues to spread, will people be better off than they are today?
+

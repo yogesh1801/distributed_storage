@@ -1,0 +1,15 @@
+gcloud container clusters create minio-llm-cluster \
+    --num-nodes=2 \
+    --zone=us-central1-a \
+    --machine-type=e2-standard-4
+
+
+gcloud container clusters get-credentials minio-llm-cluster --zone us-central1-a
+
+helm repo add minio https://charts.min.io/
+helm repo update
+helm install minio minio/minio -f minio-values.yaml
+
+kubectl get secret minio -o jsonpath="{.data.rootUser}" | base64 --decode
+kubectl get secret minio -o jsonpath="{.data.rootPassword}" | base64 --decode
+export MINIO_ENDPOINT=$(kubectl get services minio -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
